@@ -60,7 +60,7 @@ export function MenuPreview() {
                 ))}
               </ul>
               <a
-                href={`#${cat.id}`}
+                href={`/menu#${cat.id}`}
                 className="mt-6 inline-flex items-center gap-1.5 self-start text-sm font-medium text-rose-accent transition-all hover:gap-2.5 btn-font"
               >
                 See More in {cat.title}
@@ -78,7 +78,7 @@ export function MenuPreview() {
           className="mt-14 flex justify-center"
         >
           <a
-            href="#full-menu"
+            href="/menu"
             className="rounded-full bg-gradient-rose px-8 py-4 text-sm text-white shadow-glow transition-all hover:scale-105 btn-font"
           >
             View Full Menu &amp; Search

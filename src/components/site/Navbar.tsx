@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#menu", label: "Menu" },
-  { href: "#private", label: "Private Dining" },
-  { href: "#reviews", label: "Reviews" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/menu", label: "Menu" },
+  { href: "/#private", label: "Private Dining" },
+  { href: "/#reviews", label: "Reviews" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -32,7 +32,7 @@ export function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-8">
         <a
-          href="#home"
+          href="/"
           className={`flex items-center gap-2 transition-all ${
             scrolled ? "scale-90" : ""
           }`}
@@ -74,7 +74,7 @@ export function Navbar() {
         </nav>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="hidden rounded-full bg-gradient-rose px-5 py-2.5 text-sm text-white shadow-glow transition-all hover:scale-105 btn-font lg:inline-flex"
         >
           Reserve Table
@@ -109,7 +109,7 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setOpen(false)}
                 className="mt-2 rounded-2xl bg-gradient-rose px-4 py-3 text-center text-white btn-font"
               >
