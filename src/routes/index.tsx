@@ -22,8 +22,8 @@ import { Petals } from "@/components/site/Petals";
 import { SmoothScroll } from "@/components/site/SmoothScroll";
 import { CursorGlow } from "@/components/site/CursorGlow";
 import { Gallery } from "@/components/site/Gallery";
-import { MenuSection } from "@/components/site/MenuSection";
 import { MenuPreview } from "@/components/site/MenuPreview";
+import { Footer } from "@/components/site/Footer";
 import { heroVideo, aboutImage, heartCabin, heartCabin2, gallery } from "@/lib/assets";
 
 export const Route = createFileRoute("/")({
@@ -46,7 +46,6 @@ function Index() {
       <ExperienceSection />
       <Reviews />
       <InstagramSection />
-      <MenuSection />
       <Contact />
       <Footer />
     </div>
@@ -151,7 +150,7 @@ function Hero() {
             <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
           </a>
           <a
-            href="#menu"
+            href="/menu"
             className="rounded-full glass-dark px-7 py-3.5 text-sm text-white transition-all hover:scale-105 btn-font"
           >
             Explore Menu
