@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#menu", label: "Menu" },
-  { href: "#private", label: "Private Dining" },
-  { href: "#reviews", label: "Reviews" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/menu", label: "Menu" },
+  { href: "/#private", label: "Private Dining" },
+  { href: "/#reviews", label: "Reviews" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -32,7 +32,7 @@ export function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-8">
         <a
-          href="#home"
+          href="/"
           className={`flex items-center gap-2 transition-all ${
             scrolled ? "scale-90" : ""
           }`}
