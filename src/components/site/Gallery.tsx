@@ -1,10 +1,15 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { gallery } from "@/lib/assets";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function Gallery() {
   const [active, setActive] = useState<number | null>(null);
+  const triggerRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const lastTriggerRef = useRef<HTMLButtonElement | null>(null);
+  const closeBtnRef = useRef<HTMLButtonElement | null>(null);
+  const prevBtnRef = useRef<HTMLButtonElement | null>(null);
+  const nextBtnRef = useRef<HTMLButtonElement | null>(null);
 
   const close = useCallback(() => setActive(null), []);
   const prev = useCallback(
@@ -18,13 +23,35 @@ export function Gallery() {
 
   useEffect(() => {
     if (active === null) return;
+    // Move focus to close button when lightbox opens
+    closeBtnRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
       if (e.key === "ArrowLeft") prev();
       if (e.key === "ArrowRight") next();
+      if (e.key === "Tab") {
+        const focusable = [closeBtnRef.current, prevBtnRef.current, nextBtnRef.current].filter(
+          Boolean,
+        ) as HTMLElement[];
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        const activeEl = document.activeElement as HTMLElement | null;
+        if (e.shiftKey && activeEl === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && activeEl === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      // Return focus to the thumbnail that opened the lightbox
+      lastTriggerRef.current?.focus();
+    };
   }, [active, close, prev, next]);
 
   return (
@@ -33,11 +60,15 @@ export function Gallery() {
         {gallery.map((g, i) => (
           <motion.button
             key={i}
+            ref={(el) => { triggerRefs.current[i] = el; }}
             initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8, delay: (i % 6) * 0.08, ease: "easeOut" }}
-            onClick={() => setActive(i)}
+            onClick={() => {
+              lastTriggerRef.current = triggerRefs.current[i];
+              setActive(i);
+            }}
             className="group mb-5 block w-full overflow-hidden rounded-3xl bg-white/60 shadow-[0_20px_50px_-20px_rgba(233,30,99,0.35)] ring-1 ring-white/60 transition-all hover:-translate-y-1 hover:shadow-glow"
             style={{ breakInside: "avoid" }}
           >
@@ -69,8 +100,12 @@ export function Gallery() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-xl"
             onClick={close}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Photo viewer"
           >
             <button
+              ref={closeBtnRef}
               onClick={close}
               className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full glass-dark text-white"
               aria-label="Close"
@@ -78,6 +113,7 @@ export function Gallery() {
               <X className="h-5 w-5" />
             </button>
             <button
+              ref={prevBtnRef}
               onClick={(e) => { e.stopPropagation(); prev(); }}
               className="absolute left-5 grid h-12 w-12 place-items-center rounded-full glass-dark text-white"
               aria-label="Previous"
@@ -85,6 +121,7 @@ export function Gallery() {
               <ChevronLeft className="h-6 w-6" />
             </button>
             <button
+              ref={nextBtnRef}
               onClick={(e) => { e.stopPropagation(); next(); }}
               className="absolute right-5 bottom-1/2 grid h-12 w-12 translate-y-1/2 place-items-center rounded-full glass-dark text-white"
               aria-label="Next"
