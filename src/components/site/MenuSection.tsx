@@ -69,6 +69,7 @@ export function MenuSection() {
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Search dishes…"
+                aria-label="Search menu"
                 className="w-full rounded-2xl bg-white/60 py-3 pl-11 pr-4 text-sm outline-none placeholder:text-neutral-400 focus:ring-2 focus:ring-rose-accent/50"
               />
             </div>
@@ -77,6 +78,7 @@ export function MenuSection() {
                 <button
                   key={c.id}
                   onClick={() => scrollTo(c.id)}
+                  aria-current={active === c.id ? "true" : undefined}
                   className={`whitespace-nowrap rounded-2xl px-4 py-2.5 text-sm transition-all btn-font ${
                     active === c.id
                       ? "bg-gradient-rose text-white shadow-glow"
@@ -92,6 +94,13 @@ export function MenuSection() {
         </div>
 
         <div className="mt-14 space-y-16">
+          {filtered.length === 0 && (
+            <div className="mx-auto max-w-2xl rounded-3xl glass p-10 text-center">
+              <p className="text-lg text-neutral-700">
+                No dishes found for "{q}". Try searching for Biryani, Tandoori, or Mocktails.
+              </p>
+            </div>
+          )}
           {filtered.map((cat, idx) => (
             <div
               key={cat.id}
