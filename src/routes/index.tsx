@@ -63,6 +63,7 @@ function Hero() {
         <video
           className="h-full w-full object-cover"
           src={heroVideo}
+          poster={aboutImage}
           autoPlay
           muted
           loop
