@@ -56,7 +56,7 @@ export function Gallery() {
 
   return (
     <>
-      <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
+      <div className="columns-2 gap-3 sm:gap-5 lg:columns-3">
         {gallery.map((g, i) => (
           <motion.button
             key={i}
@@ -69,7 +69,7 @@ export function Gallery() {
               lastTriggerRef.current = triggerRefs.current[i];
               setActive(i);
             }}
-            className="group mb-5 block w-full overflow-hidden rounded-3xl bg-white/60 shadow-[0_20px_50px_-20px_rgba(233,30,99,0.35)] ring-1 ring-white/60 transition-all hover:-translate-y-1 hover:shadow-glow"
+            className="group mb-3 block w-full overflow-hidden rounded-2xl bg-white/60 shadow-[0_20px_50px_-20px_rgba(233,30,99,0.35)] ring-1 ring-white/60 transition-all hover:-translate-y-1 hover:shadow-glow sm:mb-5 sm:rounded-3xl"
             style={{ breakInside: "avoid" }}
           >
             <div className="relative overflow-hidden">
