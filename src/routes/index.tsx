@@ -23,6 +23,7 @@ import { SmoothScroll } from "@/components/site/SmoothScroll";
 import { CursorGlow } from "@/components/site/CursorGlow";
 import { Gallery } from "@/components/site/Gallery";
 import { MenuSection } from "@/components/site/MenuSection";
+import { MenuPreview } from "@/components/site/MenuPreview";
 import { heroVideo, aboutImage, heartCabin, heartCabin2, gallery } from "@/lib/assets";
 
 export const Route = createFileRoute("/")({
@@ -41,10 +42,11 @@ function Index() {
       <Features />
       <GallerySection />
       <PrivateDining />
-      <MenuSection />
+      <MenuPreview />
       <ExperienceSection />
       <Reviews />
       <InstagramSection />
+      <MenuSection />
       <Contact />
       <Footer />
     </div>

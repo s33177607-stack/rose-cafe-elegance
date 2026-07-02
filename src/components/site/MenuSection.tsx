@@ -34,7 +34,7 @@ export function MenuSection() {
   };
 
   return (
-    <section id="menu" className="relative py-24 md:py-32">
+    <section id="full-menu" className="relative py-24 md:py-32">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-rose-blush/60 blur-3xl" />
         <div className="absolute right-0 bottom-0 h-[400px] w-[400px] rounded-full bg-rose-pink/40 blur-3xl" />
@@ -52,7 +52,7 @@ export function MenuSection() {
             The Menu
           </div>
           <h2 className="text-5xl font-semibold md:text-7xl">
-            <span className="text-gradient-rose">Curated</span> for every craving
+            <span className="text-gradient-rose">Full</span> Menu
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-neutral-600">
             Multi-cuisine plates crafted with love — from smoky Andhra classics to Continental
