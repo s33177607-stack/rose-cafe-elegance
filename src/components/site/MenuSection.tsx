@@ -156,7 +156,7 @@ export function MenuSection() {
 
         {/* Sticky Order/Reserve floating */}
         <a
-          href="#contact"
+          href="/#contact"
           className="fixed bottom-6 right-6 z-40 hidden items-center gap-2 rounded-full bg-gradient-rose px-6 py-3.5 text-sm text-white shadow-glow transition-all hover:scale-105 btn-font md:inline-flex"
         >
           Reserve Table
@@ -178,7 +178,7 @@ export function MenuSection() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
-              href="#contact"
+              href="/#contact"
               className="rounded-full bg-gradient-rose px-6 py-3 text-white shadow-glow transition-all hover:scale-105 btn-font"
             >
               Reserve Your Table
