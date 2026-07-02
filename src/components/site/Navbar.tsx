@@ -74,7 +74,7 @@ export function Navbar() {
         </nav>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="hidden rounded-full bg-gradient-rose px-5 py-2.5 text-sm text-white shadow-glow transition-all hover:scale-105 btn-font lg:inline-flex"
         >
           Reserve Table
@@ -109,7 +109,7 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setOpen(false)}
                 className="mt-2 rounded-2xl bg-gradient-rose px-4 py-3 text-center text-white btn-font"
               >
