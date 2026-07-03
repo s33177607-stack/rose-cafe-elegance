@@ -1,13 +1,13 @@
-import a14 from "@/assets/cafe-14.jpg.asset.json";
-import a15 from "@/assets/cafe-15.jpg.asset.json";
-import a16 from "@/assets/cafe-16.jpg.asset.json";
-import a17 from "@/assets/cafe-17.jpg.asset.json";
-import a18 from "@/assets/cafe-18.jpg.asset.json";
-import a19 from "@/assets/cafe-19.jpg.asset.json";
-import a20 from "@/assets/cafe-20.jpg.asset.json";
-import a21 from "@/assets/cafe-21.jpg.asset.json";
-import a22 from "@/assets/cafe-22.jpg.asset.json";
-import heroVid from "@/assets/hero.mp4.asset.json";
+import a14 from "@/assets/cafe-14.jpg";
+import a15 from "@/assets/cafe-15.jpg";
+import a16 from "@/assets/cafe-16.jpg";
+import a17 from "@/assets/cafe-17.jpg";
+import a18 from "@/assets/cafe-18.jpg";
+import a19 from "@/assets/cafe-19.jpg";
+import a20 from "@/assets/cafe-20.jpg";
+import a21 from "@/assets/cafe-21.jpg";
+import a22 from "@/assets/cafe-22.jpg";
+import heroVid from "@/assets/hero.mp4";
 
 export const heroVideo = heroVid.url;
 
