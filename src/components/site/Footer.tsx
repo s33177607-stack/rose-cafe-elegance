@@ -41,7 +41,12 @@ export function Footer() {
         <div>
           <div className="mb-4 text-xs uppercase tracking-[0.3em] text-white/50">Contact</div>
           <ul className="space-y-2 text-sm text-white/70">
-            <li className="flex items-center gap-2"><Phone className="h-3.5 w-3.5" /> +91 96668 63864</li>
+            <li className="flex items-center gap-2">
+              <Phone className="h-3.5 w-3.5" />
+              <a href="tel:+919666863864" className="transition-colors hover:text-rose-blush">
+                +91 96668 63864
+              </a>
+            </li>
             <li className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5" /> Guntur, Andhra Pradesh</li>
             <li className="flex items-center gap-2"><Clock className="h-3.5 w-3.5" /> 11 AM – 11 PM Daily</li>
           </ul>
