@@ -6,6 +6,7 @@ import { Footer } from "@/components/site/Footer";
 import { MenuSection } from "@/components/site/MenuSection";
 import { SmoothScroll } from "@/components/site/SmoothScroll";
 import { CursorGlow } from "@/components/site/CursorGlow";
+import { BackToTop } from "@/components/site/BackToTop";
 
 export const Route = createFileRoute("/menu")({
   component: MenuPage,
@@ -55,8 +56,9 @@ function MenuPage() {
           <ArrowLeft className="h-4 w-4" /> Back to Home
         </a>
       </div>
-      <MenuSection />
+     <MenuSection />
       <Footer />
+      <BackToTop />
     </div>
   );
 }
