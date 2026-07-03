@@ -47,7 +47,7 @@ export function MenuPreview() {
                 ))}
               </ul>
 
-              
+              <a
                 href={`/menu#${cat.id}`}
                 className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-rose-accent transition-colors hover:text-rose-ink"
               >
@@ -62,7 +62,7 @@ export function MenuPreview() {
         </div>
 
         <div className="mt-8 text-center">
-          
+          <a
             href="/menu"
             className="inline-flex rounded-full bg-gradient-rose px-7 py-3.5 text-sm text-white shadow-glow transition-all hover:scale-105 btn-font"
           >
