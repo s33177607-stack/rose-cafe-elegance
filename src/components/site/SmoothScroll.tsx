@@ -3,6 +3,9 @@ import Lenis from "lenis";
 
 export function SmoothScroll() {
   useEffect(() => {
+    const isTouch = window.matchMedia("(pointer: coarse)").matches;
+    if (isTouch) return; // phones/tablets already scroll smoothly natively — skip Lenis here
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
