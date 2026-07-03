@@ -552,7 +552,7 @@ function InstagramSection() {
           <h2 className="text-5xl font-semibold md:text-7xl">Follow the pink diary.</h2>
         </motion.div>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-          {gallery.slice(0, 8).map((g, k) => (
+          {gallery.slice(0, 4).map((g, k) => (
             <motion.a
               key={k}
               href="https://www.instagram.com/rosecafe_guntur/"
