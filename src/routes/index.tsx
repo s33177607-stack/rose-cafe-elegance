@@ -248,8 +248,7 @@ function About() {
             ].map((c, i) => (
               <div key={i} className="rounded-3xl glass p-6">
                 <div className="font-display text-4xl font-semibold text-gradient-rose md:text-5xl">
-                  {c.n === 4.7 ? "4.7" : c.n === 0 ? "Luxury" : <Counter to={c.n} suffix={c.s}/>}
-                  {c.n === 4.7 ? "★" : null}
+                  {c.n === 4.7 ? "4.7★" : c.n === 0 ? "Luxury" : '${c.n}${c.s}'}
                 </div>
                 <div className="mt-2 text-sm text-neutral-500">{c.l}</div>
               </div>
