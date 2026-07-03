@@ -528,7 +528,7 @@ function Reviews() {
         </div>
 
         <div className="mt-8 text-center">
-          
+          <a
             href="https://www.google.com/maps?q=Rose+Cafe+Guntur"
             target="_blank"
             rel="noreferrer"
