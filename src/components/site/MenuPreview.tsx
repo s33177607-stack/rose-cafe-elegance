@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { menuCategories } from "@/lib/menu-data";
 
+const featuredIds = ["nv-biryani", "veg-biryani", "nv-tandoori", "seafood", "continental", "mocktails"];
+const featuredCategories = menuCategories.filter((c) => featuredIds.includes(c.id));
+
 export function MenuPreview() {
   return (
     <section id="menu" className="relative py-24 md:py-32">
@@ -29,8 +32,8 @@ export function MenuPreview() {
           </p>
         </motion.div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {menuCategories.map((cat, idx) => (
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featuredCategories.map((cat) => (
             <motion.div
               key={cat.id}
               initial={{ opacity: 0, y: 30 }}
