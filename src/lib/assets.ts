@@ -9,20 +9,20 @@ import a21 from "@/assets/cafe-21.jpg";
 import a22 from "@/assets/cafe-22.jpg";
 import heroVid from "@/assets/hero.mp4";
 
-export const heroVideo = heroVid.url;
+export const heroVideo = heroVid;
 
 export const gallery = [
-  { url: a16.url, title: "Neon Rose Arch", h: "tall" },
-  { url: a15.url, title: "Feel The Vibe", h: "med" },
-  { url: a21.url, title: "Heart Cabin", h: "tall" },
-  { url: a19.url, title: "Be You Tiful", h: "med" },
-  { url: a18.url, title: "Floral Dining Hall", h: "short" },
-  { url: a22.url, title: "Neon Sound Lounge", h: "med" },
-  { url: a17.url, title: "Love Wall", h: "tall" },
-  { url: a20.url, title: "Golden Arch", h: "short" },
-  { url: a14.url, title: "Rose Cafe Interior", h: "med" },
+  { url: a16, title: "Neon Rose Arch", h: "tall" },
+  { url: a15, title: "Feel The Vibe", h: "med" },
+  { url: a21, title: "Heart Cabin", h: "tall" },
+  { url: a19, title: "Be You Tiful", h: "med" },
+  { url: a18, title: "Floral Dining Hall", h: "short" },
+  { url: a22, title: "Neon Sound Lounge", h: "med" },
+  { url: a17, title: "Love Wall", h: "tall" },
+  { url: a20, title: "Golden Arch", h: "short" },
+  { url: a14, title: "Rose Cafe Interior", h: "med" },
 ] as const;
 
-export const aboutImage = a18.url;
-export const heartCabin = a21.url;
-export const heartCabin2 = a17.url;
+export const aboutImage = a18;
+export const heartCabin = a21;
+export const heartCabin2 = a17;
