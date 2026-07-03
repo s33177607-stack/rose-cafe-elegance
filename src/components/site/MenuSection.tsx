@@ -51,7 +51,7 @@ export function MenuSection() {
           <div className="mb-4 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-rose-accent">
             The Menu
           </div>
-          <h2 className="text-5xl font-semibold md:text-7xl">
+          <h2 className="text-3xl font-semibold sm:text-5xl md:text-7xl">
             <span className="text-gradient-rose">Full</span> Menu
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-neutral-600">
@@ -117,7 +117,7 @@ export function MenuSection() {
               >
                 <div>
                   <div className="text-4xl">{cat.icon}</div>
-                  <h3 className="mt-2 text-3xl font-semibold md:text-5xl">{cat.title}</h3>
+                 <h3 className="mt-2 text-2xl font-semibold md:text-5xl">{cat.title}</h3>
                 </div>
                 <div className="h-px flex-1 bg-gradient-to-r from-rose-pink/60 to-transparent" />
                 <div className="hidden text-xs uppercase tracking-[0.3em] text-neutral-500 md:block">
