@@ -109,7 +109,7 @@ function Hero() {
           initial={{ opacity: 0, y: 40, filter: "blur(30px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-          className="mt-6 text-6xl font-semibold leading-[0.95] md:text-8xl lg:text-[10rem]"
+         className="mt-6 text-4xl font-semibold leading-[0.95] sm:text-6xl md:text-8xl lg:text-[10rem]"
         >
           Rose <span className="italic text-rose-blush">Cafe</span>
         </motion.h1>
@@ -125,7 +125,7 @@ function Hero() {
           initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1, delay: 0.7 }}
-          className="mt-10 max-w-3xl text-2xl font-light leading-tight md:text-4xl"
+          className="mt-10 max-w-3xl text-lg font-light leading-tight sm:text-2xl md:text-4xl"
         >
           "Where every meal becomes a <em className="text-rose-blush">beautiful memory</em>."
         </motion.h2>
@@ -231,7 +231,7 @@ function About() {
           <div className="mb-4 inline-flex rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-rose-accent">
             About Rose Cafe
           </div>
-          <h2 className="text-4xl font-semibold md:text-6xl">
+          <h2 className="text-3xl font-semibold md:text-6xl">
             Experience dining like <span className="text-gradient-rose italic">never before</span>
           </h2>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600">
@@ -281,7 +281,7 @@ function Features() {
           transition={{ duration: 0.8 }}
           className="mb-14 flex flex-col items-end justify-between gap-6 md:flex-row md:items-end"
         >
-          <h2 className="max-w-2xl text-4xl font-semibold md:text-6xl">
+          <h2 className="max-w-2xl text-3xl font-semibold md:text-6xl">
             Little things that make dining <em className="text-gradient-rose">unforgettable</em>.
           </h2>
           <div className="text-sm uppercase tracking-[0.3em] text-neutral-500">Features</div>
@@ -330,7 +330,7 @@ function GallerySection() {
           <div className="mb-4 inline-flex rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-rose-accent">
             Gallery
           </div>
-          <h2 className="text-5xl font-semibold md:text-7xl">
+         <h2 className="text-3xl font-semibold sm:text-5xl md:text-7xl">
             An <span className="text-gradient-rose italic">Instagram-worthy</span> world.
           </h2>
           <p className="mt-4 text-neutral-600">
@@ -358,7 +358,7 @@ function PrivateDining() {
             <div className="mb-4 inline-flex rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-rose-accent">
               Private Dining
             </div>
-            <h2 className="text-4xl font-semibold md:text-6xl leading-tight">
+            <h2 className="text-3xl font-semibold sm:text-4xl md:text-6xl leading-tight">
               A cabin made for <span className="text-gradient-rose italic">two hearts</span>.
             </h2>
             <p className="mt-6 max-w-md text-lg text-neutral-600">
@@ -488,7 +488,7 @@ function Reviews() {
               <Star key={k} className="h-5 w-5 fill-current" />
             ))}
           </div>
-          <h2 className="text-5xl font-semibold md:text-7xl">
+         <h2 className="text-3xl font-semibold sm:text-5xl md:text-7xl">
             <span className="text-gradient-rose">4.7</span> · loved by 2000+
           </h2>
           <p className="max-w-xl text-neutral-600">Real words from real guests on Google.</p>
@@ -558,7 +558,7 @@ function InstagramSection() {
           <div className="inline-flex items-center gap-2 rounded-full glass-dark px-4 py-1.5 text-xs uppercase tracking-[0.3em]">
             <Instagram className="h-3 w-3" /> @rosecafe_guntur
           </div>
-          <h2 className="text-5xl font-semibold md:text-7xl">Follow the pink diary.</h2>
+          <h2 className="text-3xl font-semibold sm:text-5xl md:text-7xl">Follow the pink diary.</h2>
         </motion.div>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
           {gallery.slice(0, 4).map((g, k) => (
@@ -614,7 +614,7 @@ function Contact() {
           <div className="mb-4 inline-flex rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-rose-accent">
             Visit Us
           </div>
-          <h2 className="text-5xl font-semibold md:text-7xl">
+          <h2 className="text-3xl font-semibold sm:text-5xl md:text-7xl">
             Come find <span className="text-gradient-rose italic">the pink door</span>.
           </h2>
         </motion.div>
