@@ -18,6 +18,7 @@ import {
   Sofa,
 } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
+import { BackToTop } from "@/components/site/BackToTop";
 import { Petals } from "@/components/site/Petals";
 import { SmoothScroll } from "@/components/site/SmoothScroll";
 import { CursorGlow } from "@/components/site/CursorGlow";
@@ -45,8 +46,9 @@ function Index() {
       <MenuPreview />
       <Reviews />
       <InstagramSection />
-      <Contact />
+     <Contact />
       <Footer />
+      <BackToTop />
     </div>
   );
 }
