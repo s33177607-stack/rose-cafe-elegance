@@ -33,7 +33,7 @@ export function MenuPreview() {
         </motion.div>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredCategories.map((cat) => (
+          {featuredCategories.map((cat, idx) => (
             <motion.div
               key={cat.id}
               initial={{ opacity: 0, y: 30 }}
