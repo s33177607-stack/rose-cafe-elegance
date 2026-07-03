@@ -41,9 +41,8 @@ function Index() {
       <About />
       <Features />
       <GallerySection />
-      <PrivateDining />
+     <PrivateDining />
       <MenuPreview />
-      <ExperienceSection />
       <Reviews />
       <InstagramSection />
       <Contact />
@@ -472,11 +471,6 @@ const reviewsList = [
 ];
 
 function Reviews() {
-  const [i, setI] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setI((v) => (v + 1) % reviewsList.length), 4500);
-    return () => clearInterval(t);
-  }, []);
   return (
     <section id="reviews" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
@@ -498,7 +492,7 @@ function Reviews() {
           <p className="max-w-xl text-neutral-600">Real words from real guests on Google.</p>
         </motion.div>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="-mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-5 pb-4 md:mx-0 md:px-0">
           {reviewsList.map((r, k) => (
             <motion.div
               key={k}
@@ -506,9 +500,7 @@ function Reviews() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: k * 0.05 }}
-              className={`rounded-3xl glass p-7 transition-all ${
-                i === k ? "ring-2 ring-rose-accent/50 shadow-glow -translate-y-1" : ""
-              }`}
+              className="w-[85%] shrink-0 snap-center rounded-3xl glass p-7 transition-all sm:w-[380px]"
             >
               <div className="mb-4 flex text-rose-accent">
                 {Array.from({ length: 5 }).map((_, s) => (
@@ -527,6 +519,21 @@ function Reviews() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-4 text-center text-xs text-neutral-400 md:hidden">
+          ← Swipe to see more reviews →
+        </div>
+
+        <div className="mt-8 text-center">
+          
+            href="https://www.google.com/maps?q=Rose+Cafe+Guntur"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-rose px-7 py-3.5 text-sm text-white shadow-glow transition-all hover:scale-105 btn-font"
+          >
+            Read More Reviews on Google
+          </a>
         </div>
       </div>
     </section>
